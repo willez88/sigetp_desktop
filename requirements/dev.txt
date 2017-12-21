@@ -1,0 +1,7 @@
+django
+pillow
+django-extensions
+psycopg2
+pyinstaller
+Sphinx
+pygraphviz

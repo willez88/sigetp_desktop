@@ -1,0 +1,28 @@
+{% load base_filters %}
+{% load i18n %}
+<head>
+	<meta charset="UTF-8">
+	<title>{% trans 'Sistema Integrado de Información y Documentación Geoestadística y Tecnopolítica (SIGETP)' %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta name="description" content="{% trans 'Sistema Integrado de Información y Documentación Geoestadística y Tecnopolítica (SIGETP)' %}">
+    <meta name="author" content="William Páez (paez.william8@gmail.com at gmail.com)">
+    <meta name="author" content="{% trans 'Centro Nacional de Desarrollo e Investigación en Tecnologías Libres (CENDITEL)' %}">
+
+    {% block extra_head %}
+				<style type='text/css'>
+				{% bootstrap_min_css %}
+				{% font_awesome_min_css %}
+				{% ionicons_min_css %}
+				{% AdminLTE_min_css %}
+				{% AdminLTE_skins_min_css %}
+				{% styles_css %}
+				{% openlayers_css %}
+				{% select2_css %}
+				{% buttons_dataTables_min_css %}
+				{% dataTables_bootstrap_min_css %}
+				{% responsive_bootstrap_min_css %}
+				{% buttons_bootstrap_min_css %}
+				{% datepicker3_css %}
+				</style>
+    {% endblock %}
+</head>

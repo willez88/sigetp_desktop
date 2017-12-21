@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load base_filters %}
+
+<!-- Variables javascript generales -->
+<script type="text/javascript">
+    /// URL de archivos estáticos
+
+
+    /// URL para actualizar combos anidados
+    var URL_ACTUALIZAR_SELECT = "{% url 'actualizar_combo' %}";
+
+    /// Mensaje de error en peticiones AJAX
+    var MSG_PETICION_AJAX_FALLIDA = "{% trans 'Petición fallida. Verifique el error: ' %}";
+
+    /// Texto a mostrar para el botón de agregar registros a un formulario desde una ventana modal
+    var BTN_AGREGAR = "{% trans 'Agregar' %}";
+
+    /// Texto a mostrar para el botón de cancelar acción
+    var BTN_CANCELAR = "{% trans 'Cancelar' %}";
+
+    {% jquery_min_js %}
+    {% bootstrap_min_js %}
+    {% bootbox_min_js %}
+    {% openlayers_min_js %}
+    {% select2_full_min_js %}
+    {% jquery_mask_min_js %}
+    {% AdminLTE_min_js %}
+    {% ajax_request_js %}
+    {% funciones_js %}
+    {% jquery_dataTables_min_js %}
+    {% dataTables_bootstrap_min_js %}
+    {% dataTables_responsive_min_js %}
+    {% bootstrap_datepicker_js %}
+    {% bootstrap_datepicker_es_js %}
+</script>
+
+<!-- Formularios de ventanas modales -->
+{% include 'base.form.box.html' %}
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        //muestra los mensajes centrados
+        $('[data-toggle="tooltip"]').tooltip();
+
+        //para agregar el select2 en los respectivos campos de tipo select
+        $(".select2").select2();
+    });
+</script>
