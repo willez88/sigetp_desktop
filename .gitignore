@@ -2,6 +2,7 @@
 *.py~
 *.sqlite3
 *.spec
+sigetp/settings.py
 __pycache__
 migrations
 build
